@@ -404,13 +404,19 @@
             transform: translateX(8px);
         }
 
-        /* Color accents for cards */
-        .topic-card:nth-child(1) { border-left: 6px solid var(--primary); }
+        /* Color accents for available cards */
+        .topic-card:nth-child(1) { border-left: 6px solid var(--orange); }
         .topic-card:nth-child(2) { border-left: 6px solid var(--blue); }
-        .topic-card:nth-child(3) { border-left: 6px solid var(--orange); }
+        .topic-card:nth-child(3) { border-left: 6px solid var(--primary); }
         .topic-card:nth-child(4) { border-left: 6px solid var(--secondary); }
-        .topic-card:nth-child(5) { border-left: 6px solid var(--purple); }
-        .topic-card:nth-child(6) { border-left: 6px solid var(--green); }
+
+        /* Dim coming-soon cards slightly */
+        .topics-grid + .section-title + .topics-grid .topic-card {
+            opacity: 0.82;
+        }
+        .topics-grid + .section-title + .topics-grid .topic-card:hover {
+            opacity: 1;
+        }
 
         /* Footer */
         footer {
@@ -609,11 +615,12 @@
 
         <!-- Topics Section -->
         <section class="topics" id="topics">
-            <h2 class="section-title">🌟 Esplora gli Argomenti</h2>
+            <h2 class="section-title">🌟 Moduli Disponibili</h2>
+            <!-- ── available modules ── -->
             <div class="topics-grid">
-                
-                <!-- Topic 1: Apparato Digerente -->
-                <a href="apparato-digerente.html" class="topic-card reveal">
+
+                <!-- 1 Apparato Digerente -->
+                <a href="apparato_digerente.html" class="topic-card reveal">
                     <div class="topic-header">
                         <span class="topic-icon">🍕</span>
                         <h3 class="topic-title">L'Apparato Digerente</h3>
@@ -622,16 +629,63 @@
                         Scopri il fantastico viaggio del cibo nel tuo corpo! Dalla bocca all'intestino, con giochi interattivi, quiz coinvolgenti e animazioni spettacolari.
                     </p>
                     <div class="topic-meta">
-                        <span class="topic-badge badge-available">
-                            <span>✓</span>
-                            <span>Disponibile</span>
-                        </span>
+                        <span class="topic-badge badge-available"><span>✓</span><span>Disponibile</span></span>
                         <span class="topic-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Topic 2: Sistema Solare -->
-                <a href="sistema-solare/" class="topic-card reveal">
+                <!-- 2 Apparato Locomotore -->
+                <a href="apparato-locomotore.html" class="topic-card reveal">
+                    <div class="topic-header">
+                        <span class="topic-icon">🦴</span>
+                        <h3 class="topic-title">L'Apparato Locomotore</h3>
+                    </div>
+                    <p class="topic-description">
+                        Esplora ossa, muscoli e articolazioni! Scopri come il tuo corpo si muove, salta e danza grazie a un sistema incredibilmente raffinato.
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-badge badge-available"><span>✓</span><span>Disponibile</span></span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <!-- 3 Apparato Circolatorio -->
+                <a href="apparato-circolatorio.html" class="topic-card reveal">
+                    <div class="topic-header">
+                        <span class="topic-icon">🫀</span>
+                        <h3 class="topic-title">L'Apparato Circolatorio</h3>
+                    </div>
+                    <p class="topic-description">
+                        Il cuore batte, il sangue scorre! Scopri come il sistema circolatorio trasporta ossigeno e nutrienti in ogni angolo del tuo corpo, ogni secondo.
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-badge badge-available"><span>✓</span><span>Disponibile</span></span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <!-- 4 Apparato Respiratorio -->
+                <a href="polmoni.html" class="topic-card reveal">
+                    <div class="topic-header">
+                        <span class="topic-icon">🫁</span>
+                        <h3 class="topic-title">L'Apparato Respiratorio</h3>
+                    </div>
+                    <p class="topic-description">
+                        Respiri 20.000 volte al giorno senza pensarci! Scopri il viaggio dell'aria dal naso agli alveoli e lo scambio magico tra ossigeno e anidride carbonica.
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-badge badge-available"><span>✓</span><span>Disponibile</span></span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ── coming soon ── -->
+            <h2 class="section-title" style="font-size:2.8rem; margin-top:20px; margin-bottom:40px; opacity:0.85;">⏳ In Arrivo</h2>
+            <div class="topics-grid">
+
+                <!-- 5 Sistema Solare -->
+                <a href="#" class="topic-card reveal">
                     <div class="topic-header">
                         <span class="topic-icon">🌍</span>
                         <h3 class="topic-title">Il Sistema Solare</h3>
@@ -640,16 +694,13 @@
                         Viaggia tra i pianeti e scopri i segreti dello spazio! Esplora stelle, pianeti, asteroidi e galassie in un'avventura cosmica.
                     </p>
                     <div class="topic-meta">
-                        <span class="topic-badge badge-coming">
-                            <span>⏳</span>
-                            <span>Prossimamente</span>
-                        </span>
+                        <span class="topic-badge badge-coming"><span>⏳</span><span>Prossimamente</span></span>
                         <span class="topic-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Topic 3: Dinosauri -->
-                <a href="dinosauri/" class="topic-card reveal">
+                <!-- 6 Dinosauri -->
+                <a href="#" class="topic-card reveal">
                     <div class="topic-header">
                         <span class="topic-icon">🦕</span>
                         <h3 class="topic-title">I Dinosauri</h3>
@@ -658,34 +709,13 @@
                         Torna indietro nel tempo e conosci i giganti del passato! T-Rex, Triceratopo, Velociraptor e molti altri ti aspettano.
                     </p>
                     <div class="topic-meta">
-                        <span class="topic-badge badge-coming">
-                            <span>⏳</span>
-                            <span>Prossimamente</span>
-                        </span>
+                        <span class="topic-badge badge-coming"><span>⏳</span><span>Prossimamente</span></span>
                         <span class="topic-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Topic 4: Il Corpo Umano -->
-                <a href="corpo-umano/" class="topic-card reveal">
-                    <div class="topic-header">
-                        <span class="topic-icon">🫀</span>
-                        <h3 class="topic-title">Il Corpo Umano</h3>
-                    </div>
-                    <p class="topic-description">
-                        Esplora la macchina più incredibile dell'universo: il tuo corpo! Cuore, polmoni, cervello, muscoli e molto altro da scoprire.
-                    </p>
-                    <div class="topic-meta">
-                        <span class="topic-badge badge-coming">
-                            <span>⏳</span>
-                            <span>Prossimamente</span>
-                        </span>
-                        <span class="topic-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Topic 5: Gli Oceani -->
-                <a href="oceani/" class="topic-card reveal">
+                <!-- 7 Gli Oceani -->
+                <a href="#" class="topic-card reveal">
                     <div class="topic-header">
                         <span class="topic-icon">🌊</span>
                         <h3 class="topic-title">Gli Oceani</h3>
@@ -694,16 +724,13 @@
                         Immergiti nelle profondità marine! Scopri pesci colorati, balene maestose, coralli viventi e creature misteriose degli abissi.
                     </p>
                     <div class="topic-meta">
-                        <span class="topic-badge badge-coming">
-                            <span>⏳</span>
-                            <span>Prossimamente</span>
-                        </span>
+                        <span class="topic-badge badge-coming"><span>⏳</span><span>Prossimamente</span></span>
                         <span class="topic-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Topic 6: Le Piante -->
-                <a href="piante/" class="topic-card reveal">
+                <!-- 8 Le Piante -->
+                <a href="#" class="topic-card reveal">
                     <div class="topic-header">
                         <span class="topic-icon">🌱</span>
                         <h3 class="topic-title">Il Regno delle Piante</h3>
@@ -712,14 +739,10 @@
                         Scopri i segreti del mondo vegetale! Fotosintesi, alberi giganti, fiori colorati e l'importanza delle piante per la vita.
                     </p>
                     <div class="topic-meta">
-                        <span class="topic-badge badge-coming">
-                            <span>⏳</span>
-                            <span>Prossimamente</span>
-                        </span>
+                        <span class="topic-badge badge-coming"><span>⏳</span><span>Prossimamente</span></span>
                         <span class="topic-arrow">→</span>
                     </div>
                 </a>
-
             </div>
         </section>
     </div>
